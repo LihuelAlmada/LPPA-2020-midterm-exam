@@ -31,14 +31,14 @@
             <div>
                 <label for="email">E-mail: </label>
                 <br>
-                <input type="email" id="email" placeholder="Ingrese su Correo" required>
+                <input type="text" id="email" placeholder="Ingrese su Correo" required>
                 <br>
                 <br>
             </div>
             <div>
                 <label for="age">Edad:</label>
                 <br>
-                <input type="age" id="age" placeholder="Ingrese su Edad" required>
+                <input type="text" id="age" placeholder="Ingrese su Edad" required>
                 <br>
                 <br>
             </div>
@@ -59,28 +59,30 @@
             <div>
                 <label for="interest">Temas de interés:</label>
                 <br>
-                <input type="checkbox" name="sex" value="woman" id="woman">
-                <label for="woman">Música</label>
+                <input type="checkbox" name="music" value="music" id="music">
+                <label for="music">Música</label>
                 <br>
-                <input type="checkbox" name="sex" value="man" id="man">
-                <label for="man">Deporte</label>
+                <input type="checkbox" name="sport" value="sport" id="sport">
+                <label for="sport">Deporte</label>
                 <br>
-                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
-                <label for="otherSex">Juegos</label>
+                <input type="checkbox" name="game" value="game" id="game">
+                <label for="game">Juegos</label>
                 <br>
-                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
-                <label for="otherSex">Tecnología</label>
+                <input type="checkbox" name="technology" value="technology" id="technology">
+                <label for="technology">Tecnología</label>
                 <br>
-                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
-                <label for="otherSex">Otros</label>
+                <input type="checkbox" name="otherInterest" value="otherInterest" id="otherInterest">
+                <label for="otherInterest">Otros</label>
                 <br>
                 <br>
             </div>
-            <label for="options">Vende o Compra</label>
-            <select id="options">
+            <label for="country">País</label>
+            <select id="country">
                     <option value="" disabled selected>-- Seleccione un País --</option>
-                    <option value="Compra">Compra</option>
-                    <option value="Vende">Vende</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                    <option value="brazil">Brasil</option>
+                    <option value="Uruguay">Uruguay</option>
                 </select>
             <div>
                 <label for="message">Mensaje: </label>
@@ -91,7 +93,6 @@
         </fieldset>
         <br>
         <input type="submit" value="Enviar" class="buttom">
-        <input type="submit" value="Volver" class="buttom">
     </form>
 </body>
 
