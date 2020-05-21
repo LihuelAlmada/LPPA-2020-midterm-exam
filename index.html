@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="/js/app.js"></script>
-
     <title>Midterm Exam</title>
 </head>
 
@@ -32,21 +31,21 @@
             <div>
                 <label for="email">E-mail: </label>
                 <br>
-                <input type="email" id="email" placeholder="Tu Correo electrónico" required>
+                <input type="email" id="email" placeholder="Ingrese su Correo" required>
                 <br>
                 <br>
             </div>
             <div>
                 <label for="age">Edad:</label>
                 <br>
-                <input type="age" id="age" placeholder="Tu Edad" required>
+                <input type="age" id="age" placeholder="Ingrese su Edad" required>
                 <br>
                 <br>
             </div>
             <div class="sex">
                 <label for="sex">Sexo:</label>
                 <br>
-                <input type="radio" name="sex" value="woman" id="woman">
+                <input type="radio" name="sex" value="woman" id="woman" required>
                 <label for="woman">Mujer</label>
                 <br>
                 <input type="radio" name="sex" value="man" id="man">
@@ -61,31 +60,38 @@
                 <label for="interest">Temas de interés:</label>
                 <br>
                 <input type="checkbox" name="sex" value="woman" id="woman">
-                <label for="woman">Mujer</label>
+                <label for="woman">Música</label>
                 <br>
                 <input type="checkbox" name="sex" value="man" id="man">
-                <label for="man">Hombre</label>
+                <label for="man">Deporte</label>
                 <br>
                 <input type="checkbox" name="sex" value="otherSex" id="otherSex">
-                <label for="otherSex">Otro</label>
+                <label for="otherSex">Juegos</label>
                 <br>
                 <input type="checkbox" name="sex" value="otherSex" id="otherSex">
-                <label for="otherSex">Otro</label>
+                <label for="otherSex">Tecnología</label>
+                <br>
+                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
+                <label for="otherSex">Otros</label>
                 <br>
                 <br>
             </div>
+            <label for="options">Vende o Compra</label>
+            <select id="options">
+                    <option value="" disabled selected>-- Seleccione un País --</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Vende">Vende</option>
+                </select>
             <div>
-                <label for="mensaje">Mensaje: </label>
+                <label for="message">Mensaje: </label>
                 <br>
-                <textarea id="mensaje"></textarea>
+                <textarea id="message"></textarea>
                 <br>
-
             </div>
-
         </fieldset>
         <br>
-        <br>
         <input type="submit" value="Enviar" class="buttom">
+        <input type="submit" value="Volver" class="buttom">
     </form>
 </body>
 
