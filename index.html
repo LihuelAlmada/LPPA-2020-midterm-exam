@@ -8,28 +8,79 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="/js/app.js"></script>
 
-    <title>Document</title>
+    <title>Midterm Exam</title>
 </head>
 
 <body>
     <form action="">
         <fieldset>
+            <legend>Registro</legend>
             <div>
-                <label for="name">Nombre:</label> <br>
-                <input type="text" id="name" placeholder="Ingrese su nombre">
+                <label for="name">Nombre:</label>
+                <br>
+                <input type="text" id="name" placeholder="Ingrese su nombre" required>
+                <br>
+                <br>
             </div>
             <div>
-                <label for="lastName">Apellido:</label> <br>
-                <input type="text" id="lastName" placeholder="Ingrese su Apellido">
+                <label for="lastName">Apellido:</label>
+                <br>
+                <input type="text" id="lastName" placeholder="Ingrese su Apellido" required>
+                <br>
+                <br>
             </div>
             <div>
-                <label for="email">E-mail: </label> <br>
+                <label for="email">E-mail: </label>
+                <br>
                 <input type="email" id="email" placeholder="Tu Correo electrónico" required>
+                <br>
+                <br>
             </div>
             <div>
-                <label for="age">Edad:</label> <br>
+                <label for="age">Edad:</label>
+                <br>
                 <input type="age" id="age" placeholder="Tu Edad" required>
+                <br>
+                <br>
             </div>
+            <div class="sex">
+                <label for="sex">Sexo:</label>
+                <br>
+                <input type="radio" name="sex" value="woman" id="woman">
+                <label for="woman">Mujer</label>
+                <br>
+                <input type="radio" name="sex" value="man" id="man">
+                <label for="man">Hombre</label>
+                <br>
+                <input type="radio" name="sex" value="otherSex" id="otherSex">
+                <label for="otherSex">Otro</label>
+                <br>
+                <br>
+            </div>
+            <div>
+                <label for="interest">Temas de interés:</label>
+                <br>
+                <input type="checkbox" name="sex" value="woman" id="woman">
+                <label for="woman">Mujer</label>
+                <br>
+                <input type="checkbox" name="sex" value="man" id="man">
+                <label for="man">Hombre</label>
+                <br>
+                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
+                <label for="otherSex">Otro</label>
+                <br>
+                <input type="checkbox" name="sex" value="otherSex" id="otherSex">
+                <label for="otherSex">Otro</label>
+                <br>
+                <br>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje: </label>
+                <br>
+                <textarea id="mensaje"></textarea>
+                <br>
+            </div>
+
 
 
         </fieldset>
