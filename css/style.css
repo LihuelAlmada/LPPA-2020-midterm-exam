@@ -11,21 +11,27 @@ form {
     background-color: teal;
 }
 
-.sex {
-    display: flex;
-    flex-direction: column;
-}
-
+.sex,
 .interest {
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
-label {}
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
 
 input,
 select {
     border: none;
     border-radius: 10px;
     background-color: yellowgreen;
+}
+
+.country,
+#message {
+    margin-bottom: 20px;
 }
