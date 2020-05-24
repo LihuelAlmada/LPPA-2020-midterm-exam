@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: lightblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: teal;
+}
+
+.sex {
+    display: flex;
+    flex-direction: column;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+}
+
+label {}
+
+input,
+select {
+    border: none;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
