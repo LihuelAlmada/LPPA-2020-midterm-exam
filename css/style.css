@@ -7,8 +7,9 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    margin-top: 50px;
     background-color: teal;
+    padding: 50px;
 }
 
 .sex,
@@ -16,12 +17,14 @@ form {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
+    background-color: tomato;
 }
 
 .text {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
+    background-color: yellow;
 }
 
 input,
@@ -31,7 +34,15 @@ select {
     background-color: yellowgreen;
 }
 
+#music {
+    background-color: white;
+}
+
 .country,
 #message {
     margin-bottom: 20px;
+}
+
+#error {
+    color: red;
 }
