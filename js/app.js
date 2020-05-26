@@ -1,7 +1,3 @@
-//Make with https://www.youtube.com/watch?v=uUJr5Itz8kY&t=1404s
-//https://www.youtube.com/watch?v=j3ixg2cPI54
-//https://www.w3resource.com/javascript/form/email-validation.php
-
 function validate() {
     //Validate Name
     if (userName.value.length < 3 && userName.value.length != 0) {
@@ -23,7 +19,6 @@ function validate() {
     } else {
         console.log("Apellido: " + lastName.value);
     }
-
     //Validate Email
     //https://www.w3resource.com/javascript/form/email-validation.php
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
@@ -33,7 +28,7 @@ function validate() {
         messageError.push('El Email no es valido');
     }
     //validate Age
-    if (age.value < 0 || age.value > 100) {
+    if (age.value < 0 || age.value >= 100) {
         messageError.push('La edad tiene que ser entre 1 y 99')
         console.log('Edad no consistente');
     } else if (isNaN(age.value)) {
@@ -44,8 +39,8 @@ function validate() {
     }
     //Validate Sex
     if (woman.checked === false && man.checked === false && otherSex.checked === false) {
-        messageError.push('El sexo error')
-        console.log('sexo no consistente');
+        messageError.push('Tiene que elegir un sexo')
+        console.log('sexo incompleto');
     } else if (woman.checked === true) {
         console.log("Sexo: " + woman.value);
     } else if (man.checked === true) {
@@ -55,8 +50,8 @@ function validate() {
     }
     //Validate interest
     if (music.checked === false && sport.checked === false && game.checked === false && technology.checked === false && otherInterest.checked === false) {
-        messageError.push('tiene que elegir un interes')
-        console.log('tiene que elegir un interes');
+        messageError.push('Tiene que elegir un interes')
+        console.log('Interes incompleto');
     }
     console.log("Interes: ")
     if (music.checked === true) {
@@ -74,7 +69,6 @@ function validate() {
     if (otherInterest.checked === true) {
         console.log("        " + otherInterest.value);
     }
-
     //Validate Select
     if (selected.selected === true) {
         console.log("debe seleccionar un país")
@@ -87,13 +81,11 @@ function validate() {
     } else if (uruguay.selected === true) {
         console.log("País: uruguay")
     }
-
 }
-
-
 sendForm = function() {
     console.clear();
     console.log("from");
+    messageError = [];
     validate();
     error.innerHTML = messageError.join('<br>');
     return false;
@@ -119,7 +111,6 @@ window.onload = function() {
     chile = document.getElementById('chile');
     brazil = document.getElementById('brazil');
     uruguay = document.getElementById('uruguay');
-
     //variables for message error
     error = document.getElementById('error');
     messageError = [];
