@@ -17,14 +17,12 @@ form {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    background-color: tomato;
 }
 
 .text {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    background-color: yellow;
 }
 
 input,
