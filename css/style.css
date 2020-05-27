@@ -1,24 +1,25 @@
-body {
+.wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: lightblue;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     background-color: teal;
-    padding: 50px;
-    height: 100vh;
-    width: 40%;
+    margin-top: 50px;
+    padding: 20px;
+    width: 20%;
 }
 
 .sex,
 .interest {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
+    margin: 20px 0 20px 0;
 }
 
 .text {
@@ -40,9 +41,31 @@ select {
 
 .country,
 #message {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
 #error {
     color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width:1200px) {
+    form {
+        width: 40%;
+    }
+}
+
+@media (max-width:800px) {
+    form {
+        width: 50%;
+    }
 }
