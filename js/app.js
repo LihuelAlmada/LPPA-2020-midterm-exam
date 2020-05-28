@@ -1,20 +1,20 @@
 function validate() {
     //Validate Name
     if (userName.value.length < 3 && userName.value.length != 0) {
-        messageError.push('El nombre debe tener al menos 3 caracteres')
+        messageError.push('El nombre debe tener al menos 3 caracteres');
         console.log('Nombre corto');
     } else if (userName.value === null || userName.value === '') {
-        messageError.push('Complete el campo Nombre')
+        messageError.push('Complete el campo Nombre');
         console.log('Nombre sin completar');
     } else {
         console.log("Nombre: " + userName.value);
     }
     //Validate Last Name
     if (lastName.value.length < 3 && lastName.value.length != 0) {
-        messageError.push('El apellido debe tener al menos 3 caracteres')
+        messageError.push('El apellido debe tener al menos 3 caracteres');
         console.log('Apellido corto');
     } else if (lastName.value === null || lastName.value === '') {
-        messageError.push('Complete el campo Apellido')
+        messageError.push('Complete el campo Apellido');
         console.log('Apellido sin completar');
     } else {
         console.log("Apellido: " + lastName.value);
@@ -22,24 +22,24 @@ function validate() {
     //Validate Email
     //https://www.w3resource.com/javascript/form/email-validation.php
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-        console.log('El Email valido');
+        console.log('Email: ' + email.value);
     } else {
         console.log('El Email no es valido');
         messageError.push('El Email no es valido');
     }
     //validate Age
-    if (age.value < 0 || age.value >= 100) {
-        messageError.push('La edad tiene que ser entre 1 y 99')
+    if (age.value < 0 || age.value >= 100 || age.value === null || age.value === '') {
+        messageError.push('La edad tiene que ser entre 1 y 99');
         console.log('Edad no consistente');
     } else if (isNaN(age.value)) {
-        messageError.push('La edad tiene que ser en numeros')
+        messageError.push('La edad tiene que ser en numeros');
         console.log('Edad con letras');
     } else {
         console.log("Edad: " + age.value);
     }
     //Validate Sex
     if (woman.checked === false && man.checked === false && otherSex.checked === false) {
-        messageError.push('Tiene que elegir un sexo')
+        messageError.push('Tiene que elegir un sexo');
         console.log('sexo incompleto');
     } else if (woman.checked === true) {
         console.log("Sexo: " + woman.value);
@@ -50,7 +50,7 @@ function validate() {
     }
     //Validate interest
     if (music.checked === false && sport.checked === false && game.checked === false && technology.checked === false && otherInterest.checked === false) {
-        messageError.push('Tiene que elegir un interes')
+        messageError.push('Tiene que elegir un interes');
         console.log('Interes incompleto');
     }
     console.log("Interes: ")
@@ -71,15 +71,15 @@ function validate() {
     }
     //Validate Select
     if (selected.selected === true) {
-        console.log("debe seleccionar un país")
+        console.log("debe seleccionar un país");
     } else if (argentina.selected === true) {
-        console.log("País: argentina")
+        console.log("País: argentina");
     } else if (chile.selected === true) {
-        console.log("País: chile")
+        console.log("País: chile");
     } else if (brazil.selected === true) {
-        console.log("País: brazil")
+        console.log("País: brazil");
     } else if (uruguay.selected === true) {
-        console.log("País: uruguay")
+        console.log("País: uruguay");
     }
 }
 sendForm = function() {
@@ -116,5 +116,5 @@ window.onload = function() {
     messageError = [];
     //variables for send form
     sendBtn = document.getElementById('send');
-    sendBtn.onclick = sendForm
+    sendBtn.onclick = sendForm;
 }
