@@ -21,6 +21,7 @@ function validate() {
     }
     //Validate Email
     //https://www.w3resource.com/javascript/form/email-validation.php
+    //
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
         console.log('Email: ' + email.value);
     } else {
@@ -38,7 +39,7 @@ function validate() {
         console.log("Edad: " + age.value);
     }
     //Validate Sex
-    if (woman.checked === false && man.checked === false && otherSex.checked === false) {
+    if (!woman.checked && man.checked === false && otherSex.checked === false) {
         messageError.push('Tiene que elegir un sexo');
         console.log('sexo incompleto');
     } else if (woman.checked === true) {
@@ -54,31 +55,31 @@ function validate() {
         console.log('Interes incompleto');
     }
     console.log("Interes: ")
-    if (music.checked === true) {
+    if (music.checked) {
         console.log("        " + music.value);
     }
-    if (sport.checked === true) {
+    if (sport.checked) {
         console.log("        " + sport.value);
     }
-    if (game.checked === true) {
+    if (game.checked) {
         console.log("        " + game.value);
     }
-    if (technology.checked === true) {
+    if (technology.checked) {
         console.log("        " + technology.value);
     }
-    if (otherInterest.checked === true) {
+    if (otherInterest.checked) {
         console.log("        " + otherInterest.value);
     }
     //Validate Select
-    if (selected.selected === true) {
+    if (selected.selected) {
         console.log("debe seleccionar un país");
-    } else if (argentina.selected === true) {
+    } else if (argentina.selected) {
         console.log("País: argentina");
-    } else if (chile.selected === true) {
+    } else if (chile.selected) {
         console.log("País: chile");
-    } else if (brazil.selected === true) {
+    } else if (brazil.selected) {
         console.log("País: brazil");
-    } else if (uruguay.selected === true) {
+    } else if (uruguay.selected) {
         console.log("País: uruguay");
     }
 }
@@ -87,34 +88,37 @@ sendForm = function() {
     console.log("from");
     messageError = [];
     validate();
-    error.innerHTML = messageError.join('<br>');
+    //Clave
+    error.innerHTML = '<p class = "error">' + messageError.join('</p> <p class = "error"> ') + '</p>';
     return false;
 }
 window.onload = function() {
-    userName = document.getElementById('name');
-    lastName = document.getElementById('lastName');
-    email = document.getElementById('email');
-    age = document.getElementById('age');
-    //variables for sex
-    woman = document.getElementById('woman');
-    man = document.getElementById('man');
-    otherSex = document.getElementById('otherSex');
-    //variables for interest
-    music = document.getElementById('music');
-    sport = document.getElementById('sport');
-    game = document.getElementById('game');
-    technology = document.getElementById('technology');
-    otherInterest = document.getElementById('otherInterest');
-    //variables for select
-    selected = document.getElementById('selected');
-    argentina = document.getElementById('argentina');
-    chile = document.getElementById('chile');
-    brazil = document.getElementById('brazil');
-    uruguay = document.getElementById('uruguay');
-    //variables for message error
-    error = document.getElementById('error');
-    messageError = [];
-    //variables for send form
-    sendBtn = document.getElementById('send');
-    sendBtn.onclick = sendForm;
-}
+        userName = document.getElementById('name');
+        lastName = document.getElementById('lastName');
+        email = document.getElementById('email');
+        age = document.getElementById('age');
+        //variables for sex
+        woman = document.getElementById('woman');
+        man = document.getElementById('man');
+        otherSex = document.getElementById('otherSex');
+        //variables for interest
+        music = document.getElementById('music');
+        sport = document.getElementById('sport');
+        game = document.getElementById('game');
+        technology = document.getElementById('technology');
+        otherInterest = document.getElementById('otherInterest');
+        //variables for select
+        selected = document.getElementById('selected');
+        argentina = document.getElementById('argentina');
+        chile = document.getElementById('chile');
+        brazil = document.getElementById('brazil');
+        uruguay = document.getElementById('uruguay');
+        //variables for message error
+        error = document.getElementById('error');
+        messageError = [];
+        //variables for send form
+        sendBtn = document.getElementById('send');
+        sendBtn.onclick = sendForm;
+    }
+    //!select igual a select == false
+    // select... select == true
